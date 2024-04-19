@@ -10,7 +10,7 @@ defaults:
     run:
         shell: bash
         working-directory: ./
-        
+
 # Jobs run in parallel by default
 jobs:
     test:
@@ -25,7 +25,8 @@ jobs:
 
             - name: 'Run tests'
               run: npm test
-      lint:                                     
+
+    lint:                                     
         name: 'Run linter'                    
         runs-on: ubuntu-latest                
         steps:                                
@@ -36,4 +37,6 @@ jobs:
               run: npm ci                     
                                               
             - name: 'Run linter'              
-              run: npm run lint             
+              run: npm run lint               
+
+              
